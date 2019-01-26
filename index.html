@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./styles1.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/handlebars-v4.0.12.js"></script>
+  <script src="js/teamData.js"></script>
+  <script src="js/slider.js"></script>
+</head>
+
+<body>
+  <div class="main">
+    <h1 class="title">Meet our team</h1>
+    <ul id="list">
+    <script id="team" type="text/x-handelbars-template">
+      {{#each team}}
+          <li class="list-member">
+            <div  class="avatar-container">
+              <img src="{{avatar}}" alt="" class="avatar">
+                <div class="layer"></div>
+              </img>
+            </div>
+            <div>
+              <p class="p-name">{{name}}</p>
+              <p class="p-role">{{role}}</p>
+              <p class="p-city">{{city}}</p>
+            </div>
+          </li>
+      {{/each}}
+  </ul>
+  <div id="slide-window">
+    <div>
+      
+      <h3 id="close">x</h3>
+      <ol id="slides" start="1">
+            {{#each team}}
+              <li class="slide color-0 alive">
+              <div class="overlay">
+                  <div class="">
+                  <p class="role-slider">{{this.role}}</p> 
+                  <p class="name-slider">{{this.name}}</p>
+                  </div>
+              </div>
+              
+              </li>
+            {{/each}}
+          </ol>
+          <span class="nav fa fa-chevron-left fa-3x" id="left"><</span>
+    <span class="nav fa fa-chevron-right fa-3x" id="right">></span>
+        </div>
+      </div>
+    </script>
+
+
+
+</div>
+</body>
+
+</html>

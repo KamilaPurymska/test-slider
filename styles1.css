@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Montserrat:400,600|Open+Sans:400,600');
+
+
+
+.overlay{
+  background-image: linear-gradient(to top,rgba(46,79,89,0.8), rgba(69,110,121, 0.8), rgba(93,143,155, 0.8), rgba(118,177,190, 0.8), rgba(144,212,225,0.8));
+  width: 100%;
+  height: 100%;
+}
+
+#close{
+  position: absolute;
+  top: 1%;
+  z-index: 999;
+  display: block;
+  padding: 1% 3%;
+  width: auto;
+  height: auto;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  right: 0
+}
+
+.role-slider, .name-slider{
+  font-family: Montserrat,sans-serif;
+  position: absolute;
+  z-index: 999;
+  display: block;
+  width: auto;
+  height: auto;
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  margin: 0;
+  top: 25%;
+  left: 35%
+  
+}
+.role-slider{
+  font-size: 1.5em;
+  font-weight: 400;
+  top: 25%;
+  left: 35%
+}
+
+.name-slider{
+  font-size: 4em;
+  top: 40%;
+}
+
+body::-webkit-scrollbar { display: none; }
+
+#slide-window
+  {
+  position:fixed;
+  width:100%;
+  height:100%;
+  overflow:hidden;
+  top:0px;
+  left:0px;
+  display: none;
+  
+  }
+
+#slides
+  {
+  height:100%;  
+  position:absolute;
+  margin:0px;
+  padding:0px;
+  
+  -webkit-transform: translate3d(0px,0px,0px);
+  transform: translate3d(0px,0px,0px);
+    
+  transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+  
+  }
+
+.slide 
+  {
+  list-style:none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0;
+  width: 500px;
+  height: 100%;
+  background-image: url('https://assets.microncpg.com/content/dam/crucial/articles/about-graphic-design/mac-vs-pc-which-is-better-for-graphic-design/computer-for-graphic-design.jpg.transform/medium-jpg/img.jpg');
+  text-align: center;
+  line-height: 300px; 
+  background-size: cover; 
+  background-position:50% 50%;
+  color:#fff;
+  -webkit-transform: translate3d(0px,0px,0px);
+  visibility:hidden;
+  -webkit-transform-style: preserve-3d;
+  }
+
+.alive { visibility:visible; }
+
+.nav 
+  { 
+  position:fixed; 
+  z-index:9; 
+  top:50%; 
+  cursor:pointer; 
+  color:#fff; 
+  opacity:0.7; 
+  transition: all 0.66s ease; -webkit-transition: all 0.66s ease; 
+  }
+
+.nav:hover { opacity:1.0; }
+#left { left:3%; }
+#right { right:3%; }
+
