@@ -23,7 +23,9 @@
           <li class="list-member">
             <div  class="avatar-container">
               <img src="{{avatar}}" alt="" class="avatar">
-                <div class="layer"></div>
+                <div class="layer">
+                </div>
+                <span class="icon-message"><img class="message" src='./public/images/envelope.svg'/></span>
               </img>
             </div>
             <div>
@@ -36,23 +38,21 @@
   </ul>
   <div id="slide-window">
     <div>
-      
-      <h3 id="close">x</h3>
+      <img id="close" src="./public/images/cross-symbol.svg" />
       <ol id="slides" start="1">
-            {{#each team}}
-              <li class="slide color-0 alive">
-              <div class="overlay">
-                  <div class="">
-                  <p class="role-slider">{{this.role}}</p> 
-                  <p class="name-slider">{{this.name}}</p>
-                  </div>
+        {{#each team}}
+          <li class="slide color-0 alive">
+            <div class="overlay">
+              <div class="">
+                <p class="role-slider">{{this.role}}</p> 
+                <p class="name-slider">{{this.name}}</p>
               </div>
-              
-              </li>
-            {{/each}}
-          </ol>
-          <span class="nav fa fa-chevron-left fa-3x" id="left"><</span>
-    <span class="nav fa fa-chevron-right fa-3x" id="right">></span>
+            </div>
+          </li>
+        {{/each}}
+      </ol>
+    <img src="./public/images/arrowhead-thin-outline-to-the-left.svg" class="nav" id="left" />
+    <img src="./public/images/arrow-point-to-right.svg" class="nav" id="right" />
         </div>
       </div>
     </script>
